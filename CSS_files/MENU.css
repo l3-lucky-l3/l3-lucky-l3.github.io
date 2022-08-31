@@ -1,0 +1,74 @@
+/*МЕНЮ|MENU*/
+.pop_up_bg {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF;
+  z-index: 20;
+  opacity: 0;
+  color: #000;
+  pointer-events: none;
+  transition: 0.5s all;
+}
+
+.close_pop_up_div {
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.close_pop_up {
+  background: none;
+  border: none;
+  margin-left: -8px;
+  width: 60px;
+  height: 48px;
+}
+
+.pop_up_links {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  display: flex;
+  margin-left: 15%;
+}
+
+.pop_up_services {
+  margin-right: 30px;
+}
+
+.pop_up_services_h4 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.pop_up_services_a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.pop_up_services>ul>li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.pop_up_other {
+  margin-top: 20%;
+  margin-left: 35%;
+}
+
+.pop_up_other_links {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  pointer-events: all;
+  opacity: 1;
+  transition: 0.5s all;
+}
