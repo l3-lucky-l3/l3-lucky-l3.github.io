@@ -1,15 +1,1524 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My site!!!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS_files/menu_fixed.css">
+  <link rel="stylesheet" href="CSS_files/MENU.css">
+  <link rel="stylesheet" href="CSS_files/CHAT.css">
+  <link rel="stylesheet" href="POP_UP_name_email_phone.css">
+  <link rel="icon" type="image" href="img/logo_3.png">
+  <title>Студия дизайна МиАртиВиль</title>
 </head>
 
 <body>
-  <h1> this is my site GitHub Pages</h1>
+  <!--ЗАГРУЗКА|LOADER-->
+  <div class="loader_div">
+    <div class="loader_logo">
+      <img src="img/logo_3.png" alt="logo" class="loader_img">
+    </div>
+  </div>
+
+  <!--МЕНЮ|MENU-->
+  <div class="pop_up_bg">
+    <div class="close_pop_up_div">
+      <button class="close_pop_up"><i class="fa fa-times fa-2x header_icon" aria-hidden="true"></i></button>
+    </div>
+    <div class="pop_up_links">
+      <div class="pop_up_services">
+        <h4 class="pop_up_services_h4">Услуги</h4>
+        <ul>
+          <li><a href="architecture.html" target="_blank" class="pop_up_services_a">Архитектура</a></li>
+          <li><a href="society.html" target="_blank" class="pop_up_services_a">Бизнес-интерьеры</a></li>
+          <li><a href="furniture.html" target="_blank" class="pop_up_services_a">Авторская мебель</a></li>
+          <li><a href="index.html" class="pop_up_services_a">Дизайн интерьера</a></li>
+        </ul>
+      </div>
+      <div class="pop_up_services">
+        <h4 class="pop_up_services_h4">Портфолио</h4>
+        <ul>
+          <li><a href="" class="pop_up_services_a">Все проекты</a></li>
+          <li><a href="" class="pop_up_services_a">Жилые интерьеры</a></li>
+          <li><a href="" class="pop_up_services_a">Бизнес-интерьеры</a></li>
+          <li><a href="" class="pop_up_services_a">Архитектура</a></li>
+        </ul>
+      </div>
+      <div class="pop_up_services">
+        <h4 class="pop_up_services_h4">Информация</h4>
+        <ul>
+          <li><a href="about_the_studio.html" target="_blank" class="pop_up_services_a">О студии</a></li>
+          <li><a href="our_team.html" target="_blank" class="pop_up_services_a">Наша команда</a></li>
+          <li><a href="" class="pop_up_services_a">Новости</a></li>
+          <li><a href="" class="pop_up_services_a">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pop_up_other">
+      <div class="pop_up_other_links">
+        <span>Подпишитесь на нас:</span>
+        <ul class="links_list">
+          <li class="links">
+            <a href=""><i class="fa fa-vk fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="links">
+            <a href=""><i class="fa fa-houzz fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="links">
+            <a href=""><i class="fa fa-telegram fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--ЧАТ|CHAT-->
+  <div class="chat_icon">
+    <i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
+  </div>
+  <div class="chat">
+    <div class="chat_close">
+      <div class="chat_close_button_div">
+        <button class="chat_close_button">&#215</button>
+      </div>
+    </div>
+    <div class="chat_filters_hr">
+      <hr>
+    </div>
+    <div class="chat_application">
+      <div class="chat_message_default">
+        <div class="chat_message_default_icon">
+          <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="chat_message_default_text">Мы на связи и готовы обсудить ваш дизайн-проект!</div>
+      </div>
+      <div class="chat_form">
+        <div class="chat_form_text">Вы можете оставить нам сообщение и мы перезвоним Вам как можно скорее!</div>
+        <form action="form_chat.php" method="post" class="pop_up_button_form" id="form_chat"
+          onsubmit="javascript:return validate_chat('form_chat', 'id_name_chat', 'id_phone_chat' )">
+          <div class="chat_form_message">
+            <textarea name="textarea_chat" id="message_textarea" placeholder="Ваше сообщение…"
+              class="chat_form_message_textarea"></textarea>
+          </div>
+          <div class="chat_form_name_phone">
+            <input name="name_chat" type="text" class="chat_form_name_input" placeholder="Имя…" id="id_name_chat">
+            <div title="Это поле обязательно для заполнения" class="star">*</div>
+            <input name="phone_chat" type="tel" class="chat_form_phone_input" placeholder="Телефон…" id="id_phone_chat"
+              autocomplete="off" maxlength="18" data-tel-input="">
+            <div title="Это поле обязательно для заполнения" class="star">*</div>
+          </div>
+          <div class="chat_form_button_div">
+            <button type="submit" class="chat_form_button">Отправить заявку</button>
+          </div>
+          <div class="pop_up_button_check">
+            <input type="checkbox" name="checkbox" id="check3box_chat" class="check3box" checked="" required>
+            <label for="check3box_chat" class=""></label>
+            <span class="pop_up_button_check_span">Нажимая кнопку "Заказать проект", я даю своё согласие на обработку
+              моих персональных данных.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--POP UP ИМЯ_E-MAIL_ТЕЛЕФОН-->
+  <div class="pop_up_button_bg">
+    <div class="pop_up_button">
+      <div class="pop_up_button_logo">
+        <img src="img/logo_3.png" alt="logo" style="max-width: 150px;">
+      </div>
+      <div class="pop_up_button_hr">
+        <hr class="red_hr">
+      </div>
+      <div class="pop_up_button_form_div">
+        <form action="form.php" method="post" class="pop_up_button_form" id="form_id"
+          onsubmit="javascript:return validate('form_id', 'fm-1', 'fm-2', 'fm-3' )">
+          <div class="pop_up_button_form_bg">
+            <div class="name">
+              <input name="name" type="text" placeholder="Ваше имя" class="aes_name" id="fm-1" autocomplete="off">
+            </div>
+            <div class="name">
+              <input name="email" type="text" placeholder="Ваш E-mail" class="aes_email" id="fm-2" autocomplete="off">
+            </div>
+            <div class="phone">
+              <input name="phone" type="tel" data-tel-input placeholder="+7 (___) ___-__-__" class="aes_phone tel"
+                id="fm-3" autocomplete="off" maxlength="18">
+            </div>
+            <button type="submit" class="form_button">Связаться с нами</button>
+          </div>
+          <div class="pop_up_button_hr">
+            <hr class="red_hr">
+          </div>
+          <div class="pop_up_button_check">
+            <input type="checkbox" name="checkbox" id="check3box" class="check3box" checked="" required>
+            <label for="check3box" class=""></label>
+            <span class="pop_up_button_check_span">Нажимая кнопку "Заказать проект", я даю своё согласие на обработку
+              моих персональных данных.</span>
+          </div>
+        </form>
+      </div>
+      <div class="pop_up_button_close-div">
+        <button class="close_pop_up_button"><i class="fa fa-times fa-2x header_icon" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!--МЕНЮ + ТЕЛЕФОН fixed(отдельный файл css)-->
+  <div class="menu">
+    <button class="menu_box">
+      <span class="menu_box_span_1"></span>
+      <span class="menu_box_span_2"></span>
+      <span class="menu_box_text">МЕНЮ</span>
+    </button>
+  </div>
+  <ul class="mmenuu">
+    <li class="mmenuu_li">
+      <a href="#" class="phone_number_menu header_icon teeel">
+        <i class="fa fa-phone  icon_phone_menu" aria-hidden="true"></i>
+        <span>+7 904 343-49-37</span>
+      </a>
+      <ul class="ssubmenuu">
+        <li class="ssubmenuu_li">
+          <a href="tel:+7904343497" class="phone_number_menu header_icon ssubmenuu_li_a">
+            <i class="fa fa-phone  icon_phone_menu" aria-hidden="true"></i>
+            <span>Позвонить</span>
+          </a>
+        </li>
+        <li class="ssubmenuu_li">
+          <button id="copy" class="phone_number_menu ssubmenuu_li_a copy">Скопировать номер <br> в буфер обмена</button>
+          <input id="inputText" type="text" value="+7 904 343-49-37">
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="alert_1">
+    <div class="alert_div">
+      <div class="alert_name">Номер успешно скопирован</div>
+    </div>
+  </div>
+
+
+
+
+  <!--фото ландшафта веером|landscape fan-->
+  <div class="landscape_fan">
+    <div class="landscape_fan_close">
+      <button class="landscape_fan_close_button">×</button>
+    </div>
+    <div class="landscape_fan_2">
+      <!--<div class="landscape_fan_div_card landscape_fan_div_card_1 wrapper">
+        <div class="landscape_fan_div_card_foto wrapper_2"><img src="landscape/1.jpg" alt="" class="landscape_fan_div_card_foto_img"></div>
+      </div>-->
+      <div class="landscape_fan_div_card landscape_fan_div_card_1">
+        <div class="landscape_fan_div_card_foto"><img src="4.jpg" alt="" class="landscape_fan_div_card_foto_img"></div>
+      </div>
+      <div class="landscape_fan_div_card landscape_fan_div_card_2">
+        <div class="landscape_fan_div_card_foto"><img src="landscape/1.jpg" alt=""
+            class="landscape_fan_div_card_foto_img"></div>
+      </div>
+      <div class="landscape_fan_div_card landscape_fan_div_card_3">
+        <div class="landscape_fan_div_card_foto"><img src="landscape/1.jpg" alt=""
+            class="landscape_fan_div_card_foto_img"></div>
+      </div>
+      <div class="landscape_fan_div_card landscape_fan_div_card_4">
+        <div class="landscape_fan_div_card_foto"><img src="landscape/1.jpg" alt=""
+            class="landscape_fan_div_card_foto_img"></div>
+      </div>
+      <div class="landscape_fan_div_card landscape_fan_div_card_5">
+        <div class="landscape_fan_div_card_foto"><img src="landscape/1.jpg" alt=""
+            class="landscape_fan_div_card_foto_img"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!--ПЕРВАЯ СЕКЦИЯ|FIRST SECTION-->
+  <section class="first_section">
+    <div class="nav_bar">
+      <div class="menu_items">
+        <ul class="links_list">
+          <li class="links">
+            <button class="menu_box_nav_bar">
+              <span class="menu_box_span_1_nav_bar"></span>
+              <span class="menu_box_span_2_nav_bar"></span>
+              <span class="menu_box_text_nav_bar">МЕНЮ</span>
+            </button>
+          </li>
+          <li class="links links_media">
+            <a href=""><i class="fa fa-vk fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="links links_media">
+            <a href=""><i class="fa fa-telegram fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="img/logo_3.png" alt="logo" class="logo_img">
+      </div>
+      <div class="nav_bar_links_phone">
+        <ul class="mmenuu_first">
+          <li class="mmenuu_li_first">
+            <a class="phone_number_menu_first header_icon teeel">
+              <i class="fa fa-phone  icon_phone_menu_first" aria-hidden="true"></i>
+              <span>+7 904 343-49-37</span>
+            </a>
+            <ul class="ssubmenuu_first">
+              <li class="ssubmenuu_li_first">
+                <a href="tel:+7904343497" class="phone_number_menu_first header_icon ssubmenuu_li_a_first">
+                  <i class="fa fa-phone  icon_phone_menu_first" aria-hidden="true"></i>
+                  <span>Позвонить</span>
+                </a>
+              </li>
+              <li class="ssubmenuu_li_first">
+                <button id="copy_3" class="phone_number_menu_first ssubmenuu_li_a_first copy_first">Скопировать
+                  номер <br> в буфер обмена</button>
+                <input id="inputText_3" type="text" value="+7 904 343-49-37">
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="nav_bar_links">
+        <div class="nav_bar_links_div"><a href="#" class="nav_bar_links_text">О студии</a></div>
+        <hr class="nav_bar_links_hr">
+        <div class="nav_bar_links_div"><a href="#" class="nav_bar_links_text">Портфолио</a></div>
+        <hr class="nav_bar_links_hr">
+        <div class="nav_bar_links_div"><a href="#" class="nav_bar_links_text">Услуги и цены</a></div>
+        <hr class="nav_bar_links_hr">
+        <div class="nav_bar_links_div"><a href="#" class="nav_bar_links_text">Контакты</a></div>
+      </div>
+    </div>
+    <div class="one_section">
+      <div class="one_section_img_h1">
+        <h1 class="one_section_img_h1_text">МиАртиВиль</h1>
+        <span class="one_section_img_span">Интерьер для жизни</ы>
+      </div>
+      <div class="one_section_image">
+        <div class="one_section_image_1 image_one_1">
+          <img src="img_slider/slider1.1.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_2 image_one_2">
+          <img src="img_slider/slider1.2.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_3 image_one_3">
+          <img src="img_slider/slider1.3.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_4 image_one_4">
+          <img src="img_slider/slider1.4.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_5 image_one_5">
+          <img src="img_slider/slider1.5.jpg" alt="" class="one_section_img">
+        </div>
+      </div>
+      <div class="two_section_image opacity0_section_image">
+        <div class="one_section_image_1 image_two_6">
+          <img src="img_slider/slider1.6.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_2 image_two_7">
+          <img src="img_slider/slider1.7.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_3 image_two_8">
+          <img src="img_slider/slider1.8.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_4 image_two_9">
+          <img src="img_slider/slider1.9.jpg" alt="" class="one_section_img">
+        </div>
+        <div class="one_section_image_5 image_two_10">
+          <img src="img_slider/slider1.10.jpg" alt="" class="one_section_img">
+        </div>
+      </div>
+    </div>
+    <div class="div_arrow">
+      <div class="div_arrow_phone">
+        <div class="form_phone">
+          <div>
+            <h2 class="form_phone_h2">Мы работaем по всем городам России</h2>
+          </div>
+          <div>
+            <p class="form_phone_p">Оставьте свой номер телефона и мы вам перезвоним</p>
+          </div>
+          <div>
+            <form action="form_phone.php" method="post" class="pop_up_button_form" id="form_phone"
+              onsubmit="javascript:return validate_phone('form_phone', 'id_phone_form' )">
+              <input name="phone_project" type="tel" class="form_phone_input" placeholder="+7 (___) ___-__-__"
+                id="id_phone_form" autocomplete="off" maxlength="18" data-tel-input="">
+              <button type="submit" class="form_phone_button">ОТПРАВИТЬ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container_a">
+        <a href="#why_us_id">
+          <div class="container">
+            <div class="arrow">sss</div>
+            <div class="arrow">sss</div>
+            <div class="arrow">sss</div>
+          </div>
+        </a>
+      </div>
+      <div class="div_arrow_contacts">
+        <div class="div_arrow_contacts_center">
+          <div>
+            <a href="https://wa.me/79043434937" target="_blank" class="div_arrow_contacts_a"><i
+                class="fa fa-whatsapp fa-2x" aria-hidden="true"></i><a href="tel:79043434937" target="_blank"
+                class="div_arrow_contacts_a"><span class="div_arrow_contacts_link"> +7 (904) 343-49-37</span></a></a>
+          </div>
+          <div>
+            <a href="https://wa.me/79043434937" target="_blank" class="div_arrow_contacts_a"><i
+                class="fa fa-whatsapp fa-2x" aria-hidden="true"></i><a href="tel:79043434937" target="_blank"
+                class="div_arrow_contacts_a"><span class="div_arrow_contacts_link"> +7 (961) 300-63-55</span></a></a>
+          </div>
+          <div>
+            <a href="https://e.mail.ru/compose/?to=bespalov_art06@mail.ru" target="_blank"
+              class="div_arrow_contacts_a"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i><span
+                class="div_arrow_contacts_link">bespalov_art06@mail.ru</span></a>
+          </div>
+          <div>
+            <a href="https://vk.me/club200968755" target="_blank" class="div_arrow_contacts_a"><i class="fa fa-vk fa-2x"
+                aria-hidden="true"></i><span class="div_arrow_contacts_link">ВКонтакте</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--вторая секция|second_section-->
+  <section class="second_section">
+    <!--МЫ ПРЕДЛАГАЕМ:-->
+    <div class="why_us" id="why_us_id">
+      <div class="why_us_title">
+        <h2 class="text_title">МЫ ПРЕДЛАГАЕМ:</h2>
+      </div>
+      <div class="why_us_content">
+        <div class="why_us_items">
+          <div class="pluses">
+            <div class="pluses_title">
+              <div class="pluses_number">
+                <span class="title_number">1</span>
+              </div>
+              <div class="title_text_div">
+                <span class="pluses_title_text">Авторский дизайн</span>
+              </div>
+            </div>
+          </div>
+          <div class="pluses">
+            <div class="pluses_title">
+              <div class="pluses_number">
+                <span class="title_number">2</span>
+              </div>
+              <div class="title_text_div">
+                <span class="pluses_title_text">Мебель и предметы интерьера</span>
+              </div>
+            </div>
+          </div>
+          <div class="pluses">
+            <div class="pluses_title">
+              <div class="pluses_number">
+                <span class="title_number">3</span>
+              </div>
+              <div class="title_text_div"><span class="pluses_title_text">3D-Визуализация проекта</span></div>
+            </div>
+          </div>
+          <div class="pluses">
+            <div class="pluses_title">
+              <div class="pluses_number">
+                <span class="title_number">4</span>
+              </div>
+              <div class="title_text_div"><span class="pluses_title_text">Комплект рабочих чертежей</span></div>
+            </div>
+          </div>
+          <div class="pluses">
+            <div class="pluses_title">
+              <div class="pluses_number">
+                <span class="title_number">5</span>
+              </div>
+              <div class="title_text_div"><span class="pluses_title_text">Авторский надзор</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="why_us_items">
+          <div class="author_content">
+            <div class="author">
+              <img src="img/foto_1.JPG" alt="" class="img_author">
+              <p class="text_author">Основатель студии <br> Михаил Беспалов</p>
+            </div>
+            <hr class="red_hr">
+          </div>
+        </div>
+        <div class="why_us_items why_us_items_text">
+          <h3 class="why_us_h3">Дизайн интерьера от МиАртиВиль</h3>
+          <p class="why_us_p">Наша площадка создана для творческих людей. Для тех, кто любит свой дом и хочет им
+            восхищаться.
+          </p>
+          <p class="why_us_p">Мы специализируемся на разработке дизайна интерьеров любой сложности и направления,
+            начиная от небольших квартир, индивидуальных домов и заканчивая интерьерами магазинов, салонов красоты и
+            офисов.
+          </p>
+          <button class="black_button">Консультация</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Цены и услуги|prices-->
+    <div class="prices_section">
+      <div class="prices_header">
+        <h2>Цены и услуги</h2>
+      </div>
+      <div class="prices">
+        <div class="prices_block">
+          <div class="prices_block_absolute">
+            <div class="prices_block_mask">
+              <span class="prices_block_mask_header">Пакет <br> «Базовый»</span>
+              <span class="prices_block_mask_header_span">590&#8239;₽./м <sup>2</sup></span>
+            </div>
+            <div class="prices_block_text">
+              <ul>
+                <li class="prices_block_text_li">План мебели(планировочные решения)</li>
+                <li class="prices_block_text_li">План существующих стен</li>
+                <li class="prices_block_text_li">План демонтажа</li>
+                <li class="prices_block_text_li">План возводимых стен</li>
+                <li class="prices_block_text_li">Схема расположения электротехнического оборудования</li>
+                <li class="prices_block_text_li">План потолков</li>
+                <li class="prices_block_text_li">План полов</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="prices_block_2">
+          <div class="prices_block_absolute">
+            <div class="prices_block_mask">
+              <span class="prices_block_mask_header">Пакет <br> «Стандарт»</span>
+              <span class="prices_block_mask_header_span">760&#8239;₽./м <sup>2</sup></span>
+            </div>
+            <div class="prices_block_text">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="prices_block_3">
+          <div class="prices_block_absolute">
+            <div class="prices_block_mask">
+              <span class="prices_block_mask_header">Пакет <br> «Премиум»</span>
+              <span class="prices_block_mask_header_span">1300&#8239;₽./м <sup>2</sup></span>
+            </div>
+            <div class="prices_block_text">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--ЛАНДШАФТ|LANDSCAPE-->
+    <div class="landsc">
+      <div class="landscape">
+        <div class="landscape_block">
+          <div class="landscape_block_img_1 img_1_transform">
+            <img src="landscape/1.jpg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_2 img_2_transform">
+            <img src="landscape/2.jpg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_3 img_3_transform">
+            <img src="landscape/3.jpeg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_4 img_4_transform">
+            <img src="landscape/4.jpeg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_5 img_5_transform">
+            <img src="landscape/5.jpg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_6 img_6_transform">
+            <img src="landscape/6.jpg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_7 img_7_transform">
+            <img src="landscape/7.jpeg" alt="landscape" class="landscape_block_img_image">
+          </div>
+          <div class="landscape_block_img_8 img_8_transform">
+            <img src="landscape/8.jpeg" alt="landscape" class="landscape_block_img_image">
+          </div>
+        </div>
+        <div class="landscape_text">
+          <div class="landscape_text_header">Ландшафтный дизайн</div>
+          <div class="landscape_text_span">Наша студия МиАртиВиль создаёт современные авторские ландшафты. От
+            3D-проектов до их фактической реализации. Основная идея нашей компании по ландшафтному дизайну – создать
+            уникальный балнс природы и человека, создать 3D-картинки будущего ландшафта и архитектурных объектов и
+            воплотить их в жизнь.
+            <ul>
+              <li><span class="landscape_text_li_span">Атмосфера</span> - яркие идеи радующие глаз</li>
+              <li><span class="landscape_text_li_span">Комфорт</span> - функциональность и расширение малых пространств
+              </li>
+              <li><span class="landscape_text_li_span">Удобство</span> - работа дистанционно, возможность быстро менять
+                параметры</li>
+              <li><span class="landscape_text_li_span">Реализуемость</span> - вся информация для реализации в удобной
+                форме с необходимым пакетом чертежей</li>
+            </ul>
+          </div>
+          <div class="landscape_text_btn">
+            <button class="landscape_text_button">Посмотреть фото <br> выполненных проектов</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--ДРУГОЕ|OTHER-->
+    <div class="other">
+      <div class="other_header">
+        <h2>Другие проекты</h2>
+      </div>
+
+      <div class="other_projects">
+        <div class="other_img other_going_left1" style="left: 0%;">
+          <img src="other_projects/бар.jpg " alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Бар</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left2" style="left: 20%;">
+          <img src="other_projects/бильярдная.jpg " alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Бильярдная</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left3" style="left: 40%;">
+          <img src="other_projects/вольер.jpeg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Вольер</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left4" style="left: 60%;">
+          <img src="other_projects/входная_зона.jpeg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Входная зона</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left5" style="left: 80%;">
+          <img src="other_projects/кладовка.jpg " alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Кладовка</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left6" style="left: 100%;">
+          <img src="other_projects/кондитерский_остров.jpg " alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Кондитерский остров</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left7" style="left: 120%;">
+          <img src="other_projects/крытый_бассейн.jpeg " alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Крытый бассейн</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left8" style="left: 140%;">
+          <img src="other_projects/мастерская.jpg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Мастерская</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left10" style="left: 160%;">
+          <img src="other_projects/магазин_продуктов.jpg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Магазин продуктов</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left11" style="left: 180%;">
+          <img src="other_projects/массажный_салон.jpg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Массажный салон</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left12" style="left: 200%;">
+          <img src="other_projects/подсобное_помещение.jpeg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Подсобное помещение</span>
+          </div>
+        </div>
+        <div class="other_img other_going_left13" style="left: 220%;">
+          <img src="other_projects/сауна.jpg" alt="other" class="other_images">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Сауна</span>
+          </div>
+        </div>
+        <!--<div class="other_img other_going_left9" style="left: 240%;">
+          <img src="other_projects/оборудование_магазина_электротоваров.jpeg" alt="other" class="other_images_e">
+          <div class="other_images_text">
+            <span class="other_images_text_span">Магазин электрики</span>
+          </div>
+        </div>-->
+      </div>
+    </div>
+
+
+    <!--Этапы работы|work_stages-->
+    <div class="work_stages_div">
+      <div class="work_stages_header">
+        <span class="work_stages_header_h2">Этапы работы</span>
+      </div>
+      <div class="work_stage">
+        <div class="work_stages decoding_appear_1">
+          <div class="work_stages_number decoding_appear_1">1</div>
+          <div class="work_stages_text decoding_appear_1">Замеры</div>
+        </div>
+        <div class="work_stage_decoding">
+          <div class="work_stage_decoding_arrow">&#10147;</div>
+          <div class="work_stage_decoding_text">
+            <span class="work_stage_decoding_text_span">Выезд на замер(платно), либо получение размеров помещений по эл.
+              почте или WhatsApp(бесплатно)</span>
+          </div>
+        </div>
+        <div class="work_stages work_stages_2 decoding_appear_2">
+          <div class="work_stages_number decoding_appear_2">2</div>
+          <div class="work_stages_text decoding_appear_2">Фото</div>
+        </div>
+        <div class="work_stage_decoding_2">
+          <div class="work_stage_decoding_arrow">&#10147;</div>
+          <div class="work_stage_decoding_text">
+            <span class="work_stage_decoding_text_span">Фотографии объекта в состоянии на сегодняшний день</span>
+          </div>
+        </div>
+        <div class="work_stages work_stages_3 decoding_appear_3">
+          <div class="work_stages_number decoding_appear_3">3</div>
+          <div class="work_stages_text decoding_appear_3">Техзадание</div>
+        </div>
+        <div class="work_stage_decoding_3">
+          <div class="work_stage_decoding_arrow">&#10147;</div>
+          <div class="work_stage_decoding_text">
+            <span class="work_stage_decoding_text_span">Определение стиля, цветовой гаммы, материалов под Ваш вкус,
+              количества человек,их возраст и хобби, количества комнат и их назначения</span>
+          </div>
+        </div>
+        <div class="work_stages work_stages_4 decoding_appear_4">
+          <div class="work_stages_number decoding_appear_4">4</div>
+          <div class="work_stages_text decoding_appear_4">Подписание договора</div>
+        </div>
+        <div class="work_stage_decoding_4">
+          <div class="work_stage_decoding_arrow">&#10147;</div>
+          <div class="work_stage_decoding_text">
+            <span class="work_stage_decoding_text_span">Заключение договора в эл. виде. Внесение аванса, первый
+              платёж</span>
+          </div>
+        </div>
+        <div class="work_stages work_stages_5 decoding_appear_5">
+          <div class="work_stages_number decoding_appear_5">5</div>
+          <div class="work_stages_text decoding_appear_5">Реализция проекта</div>
+        </div>
+        <div class="work_stage_decoding_5">
+          <div class="work_stage_decoding_arrow">&#10147;</div>
+          <div class="work_stage_decoding_text">
+            <span class="work_stage_decoding_text_span">Построение объектов в объёме. 3D-Визуализация с мебелью в ЧБ
+              варианте(Планировочные рашения)</span>
+          </div>
+        </div>
+        <div class="work_stages work_stages_6 decoding_appear_6">
+          <div class="work_stages_number decoding_appear_6">6</div>
+          <div class="work_stages_text decoding_appear_6">Согласование</div>
+        </div>
+        <div class="work_stage_decoding_6">
+          <div class="work_stage_decoding_text work_stage_decoding_text_span_6">
+            <span class="work_stage_decoding_text_span">Согласование по расположению мебели и стен/перегородок,
+              оборудования. Обсуждение отделочных материалов. Второй платёж</span>
+          </div>
+          <div class="work_stage_decoding_arrow_left">&#10146;</div>
+        </div>
+        <div class="work_stages work_stages_7 decoding_appear_7">
+          <div class="work_stages_number decoding_appear_7">7</div>
+          <div class="work_stages_text decoding_appear_7">Цвета и текстуры</div>
+        </div>
+        <div class="work_stage_decoding_7">
+          <div class="work_stage_decoding_text work_stage_decoding_text_span_6">
+            <span class="work_stage_decoding_text_span">Нанесение цвета и текстур, электрооборудования и светильников.
+              Скриншоты. Согласование цветовой гаммы</span>
+          </div>
+          <div class="work_stage_decoding_arrow_left">&#10146;</div>
+        </div>
+        <div class="work_stages work_stages_8 decoding_appear_8">
+          <div class="work_stages_number decoding_appear_8">8</div>
+          <div class="work_stages_text decoding_appear_8">3D-Визуализация</div>
+        </div>
+        <div class="work_stage_decoding_8">
+          <div class="work_stage_decoding_text work_stage_decoding_text_8">
+            <span class="work_stage_decoding_text_span">3D-Визуализация в цвете. Рендеры с освещением(фотографии
+              комнат). Третий(заключительный) платёж</span>
+          </div>
+          <div class="work_stage_decoding_arrow_left">&#10146;</div>
+        </div>
+        <div class="work_stages work_stages_9 decoding_appear_9">
+          <div class="work_stages_number decoding_appear_9">9</div>
+          <div class="work_stages_text decoding_appear_9">Чертежи</div>
+        </div>
+        <div class="work_stage_decoding_9">
+          <div class="work_stage_decoding_text">
+            <span class="work_stage_decoding_text_span">
+              <ul>
+                <li>Чертежи(AutoCAD). Согласование и отправка проекта по эл. почте постранично для пакета <span
+                    class="baz_stand_prem">«БАЗОВЫЙ»</span></li>
+                <li>Отправка проекта на <a
+                    href="https://docs.google.com/presentation/d/1yypHqt59EeDectfNTQZXFvRhtLmpIyk-TfblRrzqJcg/edit?usp=sharing"
+                    class="GoogleDisk_link">Google Диск</a> в виде презентации для пакета <span
+                    class="baz_stand_prem">«СТАНДАРТ»</span></li>
+              </ul>
+            </span>
+          </div>
+          <div class="work_stage_decoding_arrow_left">
+            <div class="work_stage_decoding_arrow_left_9">&#10146;</div>
+          </div>
+        </div>
+        <div class="work_stages work_stages_10 decoding_appear_10">
+          <div class="work_stages_number decoding_appear_10">10</div>
+          <div class="work_stages_text decoding_appear_10">Распечатка проекта</div>
+        </div>
+        <div class="work_stage_decoding_10">
+          <div class="work_stage_decoding_text work_stage_decoding_text_span_10">
+            <span class="work_stage_decoding_text_span">Распечатка проекта на бумажном носителе и отправка по
+              почте(заказным письмом) для пакета <span class="baz_stand_prem">«ПРЕМИУМ»</span></span>
+          </div>
+          <div class="work_stage_decoding_arrow_left">&#10146;</div>
+        </div>
+        <a href="https://docs.google.com/presentation/d/1yypHqt59EeDectfNTQZXFvRhtLmpIyk-TfblRrzqJcg/edit?usp=sharing"
+          class="work_stage_GoogleDisk">Посмотреть пример <br> проекта целиком</a>
+      </div>
+    </div>
+
+    <!--БЛОК 5
+    <div class="why_us">
+    </div>
+-->
+
+    <!--ПОРТФОЛИО|portfolio-->
+    <div class="portfolio">
+      <div class="portfolio_header">Портфолио</div>
+      <div class="portfolio_img_1">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity scandinavian_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/скандинавский1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity scandinavian_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/скандинавский2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity scandinavian_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/скандинавский3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity scandinavian_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/скандинавский4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity scandinavian_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/скандинавский5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity scandinavian_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/скандинавский6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_scandinavian"><span>Скандинавский стиль</span></div>
+      </div>
+
+
+      <div class="portfolio_img_2">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity loft_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/лофт 1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity loft_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/лофт2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity loft_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/лофт3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity loft_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/лофт4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity loft_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/лофт5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity loft_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/лофт6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_loft"><span>Лофт</span></div>
+      </div>
+
+
+      <div class="portfolio_img_3">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity contemporary_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity contemporary_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity contemporary_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity contemporary_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity contemporary_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity contemporary_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_contemporary"><span>Cтиль контемпорари</span></div>
+      </div>
+
+
+      <div class="portfolio_img_4">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity minimalism_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/минимализм1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity minimalism_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/минимализм2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity minimalism_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/минимализм3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity minimalism_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity minimalism_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity minimalism_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/контемпорари6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_minimalism"><span>Минимализм</span></div>
+      </div>
+
+      <div class="portfolio_img_5">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity neoclassic_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/неоклассика1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity neoclassic_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/неоклассика2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity neoclassic_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/неоклассика3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity neoclassic_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/неоклассика4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity neoclassic_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/неоклассика5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity neoclassic_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/неоклассика6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_neoclassic"><span>Неоклассика</span></div>
+      </div>
+
+
+      <div class="portfolio_img_6">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity provence_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/прованс1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity provence_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/прованс2.jpeg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity provence_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/прованс3.jpeg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity provence_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/прованс4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity provence_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/прованс5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity provence_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/прованс6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_provence"><span>Прованс</span></div>
+      </div>
+
+
+      <div class="portfolio_img_7">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity modern_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/современный стиль1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity modern_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/современный стиль2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity modern_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/современный стиль3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity modern_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/современный стиль4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity modern_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/современный стиль5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity modern_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/современный стиль6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_modern"><span>Cовременный стиль</span></div>
+      </div>
+
+
+      <div class="portfolio_img_8">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity high_tech_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/хай-тек1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity high_tech_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/хай-тек2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity high_tech_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/хай-тек3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity high_tech_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/хай-тек4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity high_tech_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/хай-тек5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity high_tech_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/хай-тек6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_high_tech"><span>Хай-тек</span></div>
+      </div>
+
+
+      <div class="portfolio_img_9">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity chale_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/шале1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity chale_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/шале2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity chale_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/шале3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity chale_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/шале4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity chale_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/шале5.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity chale_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/шале6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_chale"><span>Шале</span></div>
+      </div>
+
+
+      <div class="portfolio_img_10">
+        <div class="styles_img">
+          <div class="styles_img_items_1 styles_img_items_opacity eco_1">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Ростов-на-Дону</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/экостиль1.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_2 styles_img_items_opacity eco_2">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Сочи</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/экостиль2.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+          <div class="styles_img_items_3 styles_img_items_opacity eco_3">
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. Москва</span>
+            </div>
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/экостиль3.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+          </div>
+        </div>
+        <div class="styles_img">
+          <div class="styles_img_items_4 styles_img_items_opacity eco_4">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/экостиль4.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_5 styles_img_items_opacity eco_5">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/экостиль5.jpeg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+          <div class="styles_img_items_6 styles_img_items_opacity eco_6">
+            <div class="styles_img_items_image">
+              <img src="portfolio_and_styles/экостиль6.jpg" alt="foto" class="styles_img_items_image_foto">
+            </div>
+            <div class="styles_img_items_sity">
+              <span class="styles_img_items_sity_span">г. </span>
+            </div>
+          </div>
+        </div>
+        <div class="styles_center styles_center_eco"><span>Экостиль</span></div>
+      </div>
+    </div>
+
+
+    <!--КАРТА|MAP-->
+    <div class="why_us">
+      <div class="contacts">
+        <div class="contacts_header">
+          <h2 class="contacts_header_h2">КОНТАКТЫ</h2>
+          <div>
+            <a href="https://wa.me/79043434937" target="_blank" class="contacts_header_a"><i
+                class="fa fa-whatsapp fa-2x" aria-hidden="true"></i><a href="tel:79043434937" target="_blank"
+                class="div_arrow_contacts_a"><span class="contacts_header_link"> +7 (904) 343-49-37</span></a></a>
+          </div>
+          <div>
+            <a href="https://wa.me/79043434937" target="_blank" class="contacts_header_a"><i
+                class="fa fa-whatsapp fa-2x" aria-hidden="true"></i><a href="tel:79043434937" target="_blank"
+                class="div_arrow_contacts_a"><span class="contacts_header_link"> +7 (961) 300-63-55</span></a></a>
+          </div>
+          <div>
+            <a href="https://e.mail.ru/compose/?to=bespalov_art06@mail.ru" target="_blank" class="contacts_header_a"><i
+                class="fa fa-envelope-o fa-2x" aria-hidden="true"></i><span
+                class="contacts_header_link">bespalov_art06@mail.ru</span></a>
+          </div>
+          <div>
+            <a href="https://vk.me/club200968755" target="_blank" class="contacts_header_a"><i class="fa fa-vk fa-2x"
+                aria-hidden="true"></i><span class="contacts_header_link">ВКонтакте</span></a>
+          </div>
+        </div>
+
+
+        <div class="contacts_map">
+          <div class="contacts_map_info">
+            <div class="map_info">
+              <p class="city">г. Ростов-на-Дону</p>
+              <p class="street">п. Янтарный, пер. Ромашковый 17</p>
+              <div class="map_info_phone">
+                <div class="phone">
+                  <a href="tel:+7904343497" class="phone_number_map header_icon_map"><i
+                      class="fa fa-phone  header_icon_phone_map" aria-hidden="true"></i> + 7 904 343-49-37</a>
+                </div>
+              </div>
+              <p class="working_hours">Режим работы: ПН-СБ 10:00 - 20:00</p>
+            </div>
+            <div class="map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A5393accb08fc06533dcd8beaae284868dfec916212ea3620acbd53f30020a655&amp;source=constructor"
+                width="100%" height="546" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="contacts_signature_1">
+            <span>*Чтобы управлять картой нажмите на нее левой кнопкой мыши</span>
+          </div>
+          <div class="contacts_signature_2">
+            <span>Необходима предварительная запись!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--ПОДВАЛ|FOOTER-->
+  <footer class="footer">
+    <div class="footer_info">
+      <div class="footer_info_img"><img src="img/logo_3.png" alt="foto" class="footer_img"></div>
+      <div class="footer_links">
+        <div class="footer_services">
+          <h4 class="footer_services_h4">Услуги</h4>
+          <a href="architecture.html" target="_blank" class="footer_services_a">Архитектура</a>
+          <a href="society.html" target="_blank" class="footer_services_a">Бизнес-интерьеры</a>
+          <a href="furniture.html" target="_blank" class="footer_services_a">Авторская мебель</a>
+          <a href="index.html" class="footer_services_a">Дизайн интерьера</a>
+        </div>
+        <div class="footer_services">
+          <h4 class="footer_services_h4">Портфолио</h4>
+          <a href="" class="footer_services_a">Все проекты</a>
+          <a href="" class="footer_services_a">Жилые интерьеры</a>
+          <a href="" class="footer_services_a">Бизнес-интерьеры</a>
+          <a href="" class="footer_services_a">Архитектура</a>
+        </div>
+        <div class="footer_services">
+          <h4 class="footer_services_h4">Информация</h4>
+          <a href="about_the_studio.html" target="_blank" class="footer_services_a">О студии</a>
+          <a href="our_team.html" target="_blank" class="footer_services_a">Наша команда</a>
+          <a href="" class="footer_services_a">Новости</a>
+          <a href="" class="footer_services_a">Контакты</a>
+        </div>
+      </div>
+      <div class="footer_phone">
+        <button class="footer_button">Заказать проект</button>
+        <div class="phone_footer">
+          <ul class="mmenuu_footer">
+            <li class="mmenuu_li_footer">
+              <a class="phone_number_menu_footer header_icon teeel">
+                <i class="fa fa-phone  icon_phone_menu_footer" aria-hidden="true"></i>
+                <span>+7 904 343-49-37</span>
+              </a>
+              <ul class="ssubmenuu_footer">
+                <li class="ssubmenuu_li_footer">
+                  <a href="tel:+7904343497" class="phone_number_menu_footer header_icon ssubmenuu_li_a_footer">
+                    <i class="fa fa-phone  icon_phone_menu_footer" aria-hidden="true"></i>
+                    <span>Позвонить</span>
+                  </a>
+                </li>
+                <li class="ssubmenuu_li_footer">
+                  <button id="copy_2" class="phone_number_menu_footer ssubmenuu_li_a_footer copy_footer">Скопировать
+                    номер <br> в буфер обмена</button>
+                  <input id="inputText_2" type="text" value="+7 904 343-49-37">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <hr class="red_hr">
+    </div>
+    <div class="footer_other">
+      <div class="footer_other_law"><span>© Copyright 2022 Все права защищены <br> Главный офис: Ростов-на-Дону</span>
+      </div>
+      <div class="footer_other_links">
+        <span>Подпишитесь на нас:</span>
+        <ul class="links_list_footer">
+          <li class="links">
+            <a href=""><i class="fa fa-vk fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="links">
+            <a href=""><i class="fa fa-houzz fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="links">
+            <a href=""><i class="fa fa-telegram fa-2x header_icon" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://use.fontawesome.com/d7f8ce52aa.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="JS_files/MENU.js"></script>
+  <script type="text/javascript" src="JS_files/CHAT.js"></script>
+  <script type="text/javascript" src="JS_files/POP_UP_name_email_phone.js"></script>
 </body>
 
 </html>
